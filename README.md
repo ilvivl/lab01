@@ -4,24 +4,26 @@
 
 ## Tasks
 
-- [ ] 1. Ознакомиться со ссылками учебного материала
-- [ ] 2. Выполнить инструкцию учебного материала
-- [ ] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
+- [X] 1. Ознакомиться со ссылками учебного материала
+- [x] 2. Выполнить инструкцию учебного материала
+- [x] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
 
 ## Tutorial
 
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
+$ export GITHUB_USERNAME=ilvivl
 $ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ alias edit=subl
 ```
 
 ```ShellSession
 $ mkdir -p ${GITHUB_USERNAME}/workspace
 $ cd ${GITHUB_USERNAME}/workspace
 $ pwd
+/home/ilya/Documents/university/informatic/ilvivl/workspace
 $ cd ..
 $ pwd
+/home/ilya/Documents/university/informatic/ilvivl
 ```
 
 ```ShellSession
@@ -34,6 +36,7 @@ $ cd workspace
 ```ShellSession
 # Debian
 $ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
+Saving to: ‘node-v6.11.5-linux-x64.tar.xz.1’
 $ tar -xf node-v6.11.5-linux-x64.tar.xz
 $ rm -rf node-v6.11.5-linux-x64.tar.xz
 $ mv node-v6.11.5-linux-x64 node
@@ -41,9 +44,13 @@ $ mv node-v6.11.5-linux-x64 node
 
 ```ShellSession
 $ ls node/bin
+node  npm
 $ echo ${PATH}
+/home/ilya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 $ export PATH=${PATH}:`pwd`/node/bin
 $ echo ${PATH}
+/home/ilya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ilya/Documents/university/informatic/ilvivl/workspace/node/bin
+
 $ mkdir scripts
 $ cat > scripts/activate<<EOF
 export PATH=\${PATH}:`pwd`/node/bin
@@ -53,7 +60,9 @@ $ source scripts/activate
 
 ```ShellSession
 $ npm install -g gistup
+ -> /home/ilya/Documents/university/informatic/ilvivl/workspace/node/lib/node_modules/gistup/bin/gistup-open
 $ ls node/bin
+gistup  gistup-open  gistup-rename  node  npm
 ```
 
 ```ShellSession
@@ -69,6 +78,7 @@ EOF
 ```ShellSession
 $ export LAB_NUMBER=01
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
+Unpacking objects: 100% (53/53), done.
 $ mkdir reports/lab${LAB_NUMBER}
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
 $ cd reports/lab${LAB_NUMBER}
