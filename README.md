@@ -12,7 +12,7 @@
 
 ```bash
 $ export GITHUB_USERNAME=ilvivl
-$ export GIST_TOKEN=<сохраненный_токен>
+$ export GIST_TOKEN=**
 $ alias edit=subl
 ```
 
